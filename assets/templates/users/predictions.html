@@ -1,0 +1,85 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+
+{%block contents%}
+
+<div id="main-copy">
+    <h1 id="introduction">View Ransomware Predictions Data</h1>
+    <p>
+        {{pred|safe}}
+
+    </p>
+
+
+    <h1 id="cross-browser">Related Work</h1>
+    <p>
+        Conventional detection techniques have been applied for
+        classifying various malware including ransomware. Various
+        ransomware can be analyzed by a well-defined behavioral
+        structure and most of the ransomware families share common
+        behavioral traits including payload persistence, stealth
+        techniques, network traffic. Signature-based analysis is the most
+        widely used traditional anti-malware system and A. M. Abiola
+        and M. F. Marhusin proposed a signature-based detection
+        model for malware by extracting the Brontok worms and to
+        break down the signatures, an n-gram technique was utilized.
+        The framework enables to detection of malware and creates a
+        credible solution that eliminates any threats. To improve the
+        limitation, a static and dynamic-based or Behavior-based
+        framework was introduced by where analysis static-based
+        technique analyze the application’s code to determine malicious
+        activities and dynamic-based analysis on the other hand
+        monitoring the processes to determine the behavior of malicious
+        intent and will be flagged as suspicious and terminated. Both
+        static and dynamic-based analysis has limitation in terms of the
+        inability to detect unknown malware and ineffectiveness against
+        code obfuscation, high variant output, and targeted attacks. F.
+        Noorbehbahani and M. Saberi focused on semi-supervised
+        learning for exploiting a number of labeled data and a lot of
+        unlabeled data towards detecting ransomware. Different feature
+        selection and semi-supervised classification methods were
+        applied to the CICAndMal 2017 dataset for analyzing the
+        ransomware and the semi-supervised classification method
+        using the random forest as a base classifier outperforms the
+        various semi-supervised classification techniques for
+        ransomware detection.
+    </p>
+
+
+    <h1 id="stylesheets">Methodology</h1>
+    <p>
+        We applied traditional ML classifiers (e.g., decision tree
+        classifier, random forest classifier, naïve bayes classifier, and
+        logistic regression classifier) and neural network-based
+        architecture to detect ransomware.
+        The ransomware
+        data were standardized to convert different scale variable into a
+        similar range. Feature selection method was applied to select a
+        number of important features from the data and consequently,
+        feed the features into different classifiers to detect ransomware
+        from legitimate observations. We implemented 10-fold cross
+        validation technique to generalize the model. Finally, we
+        reported different evaluation metrics such as accuracy, F-beta
+        score, precision, recall and area under ROC curve to assess the
+        models’ performance.
+    </p>
+    <h1 id="accessibility">Feature Selection</h1>
+    <p>
+        In the second step of feature selection, we checked the
+        multicollinearity of the high variance features using variance
+        inflation factor (VIF). A VIF score 10 was selected to identify
+        highly correlated features, meaning that a feature is identified
+        if the VIF score is higher than 10. Features:
+        SectionMeanRawSize and SectionMaxRawSize show
+        multicollinearity by displaying 19.52 and 19.48 VIF scores,
+        respectively. We randomly dropped one of these variables.
+        Table 1 illustrates the 12 high variant features with associated
+        VIF score, all of which are fall inside the VIF threshold. Finally,
+        we feed these 12 selected variables to the classifiers to detect
+        ransomware
+    </p>
+
+
+</div>
+
+{%endblock%}

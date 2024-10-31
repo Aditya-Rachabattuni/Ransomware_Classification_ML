@@ -1,0 +1,38 @@
+{% extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+<!--<style>-->
+<!--    .bg-light{-->
+<!--    margin-top: -500px;-->
+<!--    background: #65cd00;-->
+<!--    padding:10px;-->
+<!--    }-->
+
+<!--</style>-->
+
+<section class="we-do">
+    <div class="container">
+        <div class="we-do-details">
+            <div class="section-header text-center">
+                <h2>Detailed Classification Report</h2>
+                <p>
+                    <center>
+                <h2>Randome Forest</h2>
+                {{rf|safe}}
+                <h2>Decision Tree</h2>
+                {{dt|safe}}
+                <h2>Naive Bayes</h2>
+                {{nb|safe}}
+                <h2>Logistic Regression</h2>
+                {{lg|safe}}
+                <h2>Neural Network</h2>
+                {{nn|safe}}
+                </center>
+                </p>
+            </div><!--/.section-header-->
+        </div><!--/.we-do-details-->
+    </div><!--/.container-->
+</section><!--/.we-do-->
+
+
+{%endblock%}

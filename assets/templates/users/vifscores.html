@@ -1,0 +1,326 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+
+{%block contents%}
+<style>
+.dataframe {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.dataframe td, .dataframe th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.dataframe tr:nth-child(even){background-color: #f2f2f2;}
+
+.dataframe tr:hover {background-color: #ddd;}
+
+.dataframe th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+    <div id="main-copy">
+      <h1 id="introduction">Variance Inflation Factor</h1>
+      <p>
+          <center>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>VIF</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Machine</td>
+                    <td>1.177739</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfOptionalHeader</td>
+                    <td>0.021566</td>
+                  </tr>
+                  <tr>
+                    <td>Characteristics</td>
+                    <td>1.404079</td>
+                  </tr>
+                  <tr>
+                    <td>MajorLinkerVersion</td>
+                    <td>1.151917</td>
+                  </tr>
+                  <tr>
+                    <td>MinorLinkerVersion</td>
+                    <td>1.505959</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfCode</td>
+                    <td>5.167993</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfInitializedData</td>
+                    <td>1.555628</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfUninitializedData</td>
+                    <td>1.000201</td>
+                  </tr>
+                  <tr>
+                    <td>AddressOfEntryPoint</td>
+                    <td>1.067211</td>
+                  </tr>
+                  <tr>
+                    <td>BaseOfCode</td>
+                    <td>4.271628</td>
+                  </tr>
+                  <tr>
+                    <td>BaseOfData</td>
+                    <td>1.510499</td>
+                  </tr>
+                  <tr>
+                    <td>ImageBase</td>
+                    <td>1.001105</td>
+                  </tr>
+                  <tr>
+                    <td>SectionAlignment</td>
+                    <td>1.582565</td>
+                  </tr>
+                  <tr>
+                    <td>FileAlignment</td>
+                    <td>1.066635</td>
+                  </tr>
+                  <tr>
+                    <td>MajorOperatingSystemVersion</td>
+                    <td>1.000035</td>
+                  </tr>
+                  <tr>
+                    <td>MinorOperatingSystemVersion</td>
+                    <td>4.051684</td>
+                  </tr>
+                  <tr>
+                    <td>MajorImageVersion</td>
+                    <td>1.009283</td>
+                  </tr>
+                  <tr>
+                    <td>MajorSubsystemVersion</td>
+                    <td>0.503761</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfImage</td>
+                    <td>1.973130</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfHeaders</td>
+                    <td>1.050075</td>
+                  </tr>
+                  <tr>
+                    <td>CheckSum</td>
+                    <td>1.042852</td>
+                  </tr>
+                  <tr>
+                    <td>Subsystem</td>
+                    <td>0.634281</td>
+                  </tr>
+                  <tr>
+                    <td>DllCharacteristics</td>
+                    <td>1.605046</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfStackReserve</td>
+                    <td>1.301778</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfStackCommit</td>
+                    <td>1.024979</td>
+                  </tr>
+                  <tr>
+                    <td>SizeOfHeapReserve</td>
+                    <td>0.577760</td>
+                  </tr>
+                  <tr>
+                    <td>LoaderFlags</td>
+                    <td>4.650028</td>
+                  </tr>
+                  <tr>
+                    <td>NumberOfRvaAndSizes</td>
+                    <td>4.648360</td>
+                  </tr>
+                  <tr>
+                    <td>SectionsNb</td>
+                    <td>1.074270</td>
+                  </tr>
+                  <tr>
+                    <td>SectionsMeanEntropy</td>
+                    <td>0.892691</td>
+                  </tr>
+                  <tr>
+                    <td>SectionsMinEntropy</td>
+                    <td>1.142119</td>
+                  </tr>
+                  <tr>
+                    <td>SectionsMaxEntropy</td>
+                    <td>0.598024</td>
+                  </tr>
+                  <tr>
+                    <td>SectionsMeanRawsize</td>
+                    <td>29.827561</td>
+                  </tr>
+                  <tr>
+                    <td>SectionMaxRawsize</td>
+                    <td>26.256284</td>
+                  </tr>
+                  <tr>
+                    <td>SectionsMeanVirtualsize</td>
+                    <td>2.112303</td>
+                  </tr>
+                  <tr>
+                    <td>ImportsNbDLL</td>
+                    <td>1.645830</td>
+                  </tr>
+                  <tr>
+                    <td>ImportsNb</td>
+                    <td>1.167797</td>
+                  </tr>
+                  <tr>
+                    <td>ImportsNbOrdinal</td>
+                    <td>1.404863</td>
+                  </tr>
+                  <tr>
+                    <td>ExportNb</td>
+                    <td>1.050188</td>
+                  </tr>
+                  <tr>
+                    <td>ResourcesNb</td>
+                    <td>1.069852</td>
+                  </tr>
+                  <tr>
+                    <td>ResourcesMeanEntropy</td>
+                    <td>0.853484</td>
+                  </tr>
+                  <tr>
+                    <td>ResourcesMinEntropy</td>
+                    <td>0.848490</td>
+                  </tr>
+                  <tr>
+                    <td>ResourcesMaxEntropy</td>
+                    <td>1.091800</td>
+                  </tr>
+                  <tr>
+                    <td>ResourcesMeanSize</td>
+                    <td>13.034222</td>
+                  </tr>
+                  <tr>
+                    <td>ResourcesMinSize</td>
+                    <td>7.133321</td>
+                  </tr>
+                  <tr>
+                    <td>ResourcesMaxSize</td>
+                    <td>4.385904</td>
+                  </tr>
+                  <tr>
+                    <td>LoadConfigurationSize</td>
+                    <td>1.001353</td>
+                  </tr>
+                  <tr>
+                    <td>VersionInformationSize</td>
+                    <td>1.236947</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+</center>
+      </p>
+
+
+
+      <h1 id="cross-browser">Related Work</h1>
+      <p>
+          Conventional detection techniques have been applied for
+classifying various malware including ransomware. Various
+ransomware can be analyzed by a well-defined behavioral
+structure and most of the ransomware families share common
+behavioral traits including payload persistence, stealth
+techniques, network traffic. Signature-based analysis is the most
+widely used traditional anti-malware system and A. M. Abiola
+and M. F. Marhusin proposed a signature-based detection
+model for malware by extracting the Brontok worms and to
+break down the signatures, an n-gram technique was utilized.
+The framework enables to detection of malware and creates a
+credible solution that eliminates any threats. To improve the
+limitation, a static and dynamic-based or Behavior-based
+framework was introduced by where analysis static-based
+technique analyze the application’s code to determine malicious
+activities and dynamic-based analysis on the other hand
+monitoring the processes to determine the behavior of malicious
+intent and will be flagged as suspicious and terminated. Both
+static and dynamic-based analysis has limitation in terms of the
+inability to detect unknown malware and ineffectiveness against
+code obfuscation, high variant output, and targeted attacks. F.
+Noorbehbahani and M. Saberi focused on semi-supervised
+learning for exploiting a number of labeled data and a lot of
+unlabeled data towards detecting ransomware. Different feature
+selection and semi-supervised classification methods were
+applied to the CICAndMal 2017 dataset for analyzing the
+ransomware and the semi-supervised classification method
+using the random forest as a base classifier outperforms the
+various semi-supervised classification techniques for
+ransomware detection.
+      </p>
+
+
+
+      <h1 id="stylesheets">Methodology</h1>
+     <p>
+         We applied traditional ML classifiers (e.g., decision tree
+classifier, random forest classifier, naïve bayes classifier, and
+logistic regression classifier) and neural network-based
+architecture to detect ransomware.
+The ransomware
+data were standardized to convert different scale variable into a
+similar range. Feature selection method was applied to select a
+number of important features from the data and consequently,
+feed the features into different classifiers to detect ransomware
+from legitimate observations. We implemented 10-fold cross
+validation technique to generalize the model. Finally, we
+reported different evaluation metrics such as accuracy, F-beta
+score, precision, recall and area under ROC curve to assess the
+models’ performance.
+     </p>
+      <h1 id="accessibility">Feature Selection</h1>
+      <p>
+          In the second step of feature selection, we checked the
+multicollinearity of the high variance features using variance
+inflation factor (VIF). A VIF score 10 was selected to identify
+highly correlated features, meaning that a feature is identified
+if the VIF score is higher than 10. Features:
+SectionMeanRawSize and SectionMaxRawSize show
+multicollinearity by displaying 19.52 and 19.48 VIF scores,
+respectively. We randomly dropped one of these variables.
+Table 1 illustrates the 12 high variant features with associated
+VIF score, all of which are fall inside the VIF threshold. Finally,
+we feed these 12 selected variables to the classifiers to detect
+ransomware
+      </p>
+
+
+    </div>
+
+{%endblock%}

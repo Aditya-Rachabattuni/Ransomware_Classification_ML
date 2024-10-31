@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-AU">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="author" content="haran" />
+    <meta name="generator" content="author" />
+
+    <!-- Navigational metadata for large websites (an accessibility feature): -->
+    <link rel="top"      href="./index.html" title="Homepage" />
+    <link rel="up"       href="./index.html" title="Up" />
+    <link rel="first"    href="./index.html" title="First page" />
+    <link rel="previous" href="./index.html" title="Previous page" />
+    <link rel="next"     href="./index.html" title="Next page" />
+    <link rel="last"     href="./index.html" title="Last page" />
+    <link rel="toc"      href="./index.html" title="Table of contents" />
+    <link rel="index"    href="./index.html" title="Site map" />
+
+    <link rel="stylesheet" type="text/css" href="{%static 'css/sinorca-screen.css'%}" media="screen" title="Sinorca (screen)" />
+    <link rel="stylesheet alternative" type="text/css" href="{%static 'css/sinorca-screen-alt.css'%}" media="screen" title="Sinorca (alternative)" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/sinorca-print.css'%}" media="print" />
+
+    <title>Ransomware</title>
+    <style type="text/css">
+<!--
+.style1 {color: #C1FF64}
+-->
+    </style>
+</head>
+
+  <body>
+    <!-- For non-visual user agents: -->
+      <div id="top"><a href="#main-copy" class="doNotDisplay doNotPrint">Skip to main content.</a></div>
+
+    <!-- ##### Header ##### -->
+
+    <div id="header">
+      <div class="superHeader">
+
+    <div class="left">
+        <span class="doNotDisplay">Related sites:</span>
+        <a href="./index.html"></a>  <a href="./index.html"></a> </div>
+    <div class="right"> <span class="doNotDisplay">More related sites:</span>
+      <a href="./index.html"></a>  <a href="./index.html"></a>
+      <a href="./index.html"></a>  <a href="./index.html"></a>
+      <a href="./index.html"></a> </div>
+      </div>
+
+      <div class="midHeader">
+        <h1 class="headerTitle">Ransomware Classification</h1>
+      </div>
+
+      <div class="subHeader">
+        <span class="doNotDisplay">Navigation:</span>
+        <a href="{%url 'index'%}">Home</a> |
+        <a href="{% url 'UserLogin' %}">Test Users</a> |
+        <a href="{% url 'AdminLogin' %}">Project Admin</a> |
+        <a href="{% url 'UserRegister' %}">User Register</a>
+
+      </div>
+    </div>
+
+    <!-- ##### Side Bar ##### -->
+
+    <div id="side-bar">
+      <div>
+        <p class="sideBarTitle">Evaluation metrics</p>
+        <ul>
+          <li><a href="#">&rsaquo; SizeOfOptionalHeader</a></li>
+          <li><a href="#cross-browser" title="Improved cross-browser compatibility">&rsaquo; MajorLinkerVersion</a></li>
+          <li><a href="#stylesheets" title="Modified stylesheets">&rsaquo; AddressOfEntryPoint</a></li>
+          <li><a href="#accessibility" title="Improved accessibility">&rsaquo; SectionAlignment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="sideBarTitle">Experimental setting</p>
+        <ul>
+          <li><a href="#">&rsaquo; MinorOperatingSystem</a></li>
+          <li><span class="thisPage">&raquo; SizeOfHeaders</span></li>
+          <li><a href="#">&rsaquo; SizeOfStackReserve</a></li>
+          <li><a href="#">&rsaquo; LoaderFlags</a></li>
+
+        </ul>
+      </div>
+
+      <div class="lighterBackground">
+        <p class="sideBarTitle">Results</p>
+        <span class="sideBarText">
+          We applied DT, RF, NB, LR, and NN classifiers to classify between legitimate and ransomware samples.
+        </span>
+        <span class="sideBarText">
+          Both DT and NN classifiers shows
+reasonable performance compared to RF. However, LR fails to
+achieve rewarding F-beta score and recall score compared to
+other methods, though the accuracy score is reasonable
+compared to DT, RF, and NN classifiers
+        </span>
+      </div>
+
+      <div>
+        <p class="sideBarTitle">Feature Selection</p>
+        <span class="sideBarText">
+         Z-score standardization technique was used to convert each of the variables into a similar scale by centering each of the variables at zero with a standard deviation.
+        </span>
+      </div>
+    </div>
+
+    <!-- ##### Main Copy ##### -->
+{%block contents%}
+{%endblock%}
+
+    <!-- ##### Footer ##### -->
+
+    <div id="footer">
+      <div class="left">
+        E-mail:&nbsp;<a href="./index.html" title="Email webmaster">alexcodechallenge@gmailcom</a><br />
+
+      </div>
+
+      <br class="doNotDisplay doNotPrint" />
+
+
+
+
+    </div>
+  </body>
+</html>
