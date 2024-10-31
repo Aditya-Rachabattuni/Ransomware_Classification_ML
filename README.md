@@ -13,24 +13,16 @@ Model Accuracy: Achieved high accuracy in classifying files based on their attri
 Installation
 Clone the Repository
 
-bash
-Copy code
 git clone https://github.com/Aditya-Rachabattuni/Ransomware_Classification_ML.git
 cd Ransomware_Classification_ML
 Install Dependencies Ensure you have Python installed, then install required packages:
 
-bash
-Copy code
 pip install -r requirements.txt
 Set Up Database Migrate the SQLite database:
 
-bash
-Copy code
 python manage.py migrate
 Run the Application Start the Django development server:
 
-bash
-Copy code
 python manage.py runserver
 Open a browser and go to http://127.0.0.1:8000 to access the application.
 
